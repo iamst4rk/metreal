@@ -1,0 +1,30 @@
+{
+  "name": "metreal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "knex": "^3.1.0",
+    "multer": "^1.4.5-lts.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1",
+    "sqlite3": "^5.1.7",
+    "ws": "^8.17.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "mkdirp": "^3.0.1",
+    "nodemon": "^3.1.1",
+    "rimraf": "^5.0.7"
+  }
+}
