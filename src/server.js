@@ -1,15 +1,18 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const cors = require('cors');
 const stockRoutes = require('./routes/stock');
+const { updateEmptyFields } = require('./database');
 
 const app = express();
-app.use(bodyParser.json());
-app.use(cors());
+const PORT = 5000;
 
+app.use(cors());
+app.use(express.json());
 app.use('/api/stock', stockRoutes);
 
-const PORT = process.env.PORT || 5000;
+// Обновление пустых полей в базе данных при запуске сервера
+updateEmptyFields();
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
